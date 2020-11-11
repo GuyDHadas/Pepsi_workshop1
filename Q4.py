@@ -10,14 +10,16 @@ plt.title("Probability Density")
 plt.show()
 
 
-def Reject_S():
-    N = 10**5
-    samples = []
-    for i in range(N):
-        x = np.random.uniform(0, 2*np.pi)
-        p = np.random.uniform(0, 2/(3*np.pi))
-        if p < 1/(3*np.pi) * (1 + np.cos(x)**2):
-            samples.append(x)
+def Reject_S(samples):
+    #samples can be derived in the function by the following code
+    #we found it more efficient to move the code
+    #N = 10**5
+    #samples = []
+    #for i in range(N):
+        #x = np.random.uniform(0, 2*np.pi)
+        #p = np.random.uniform(0, 2/(3*np.pi))
+        #if p < 1/(3*np.pi) * (1 + np.cos(x)**2):
+            #samples.append(x)
     lent = len(samples)
     n = np.random.randint(0, lent - 1)
     return samples[n]

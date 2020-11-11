@@ -7,6 +7,7 @@ from consts import *
 from check_in_block import *
 
 import matplotlib.pyplot as plt
+from Q4 import *
 
 
 def const(x):
@@ -37,6 +38,13 @@ def throw_photon(blocks, l_mean, p_abs):
     cur_theta = 0
     cur_block = 0
     #loc_list = [[0, 0]]
+    N = 10**5
+    samples = []
+    for i in range(N):
+        x = np.random.uniform(0, 2*np.pi)
+        p = np.random.uniform(0, 2/(3*np.pi))
+        if p < 1/(3*np.pi) * (1 + np.cos(x)**2):
+            samples.append(x)
     while True:
         cur_x, cur_y, length = get_next_loc(cur_x, cur_y, cur_theta, l_mean, blocks)
         #loc_list.append([cur_x[0], cur_y[0]])
@@ -52,7 +60,7 @@ def throw_photon(blocks, l_mean, p_abs):
             #draw_path(loc_list, blocks[0])
             return "Absorbed"
         if what_happens == 'sca':
-            cur_theta = np.random.uniform(0, 2 * math.pi)
+            cur_theta = Reject_S(samples)
 
         # print(loc_list)
 
