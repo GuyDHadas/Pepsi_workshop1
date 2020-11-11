@@ -20,6 +20,7 @@ def simulation():
     pabs = []
     ptrans = []
     pref = []
+
     for N in range(1, 7):
         for i in range(0, 10**N):
             results.append(throw_photon(blocks, l_mean, p_abs))
