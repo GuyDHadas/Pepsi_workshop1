@@ -23,20 +23,3 @@ def throw_photon(L, l_mean, p_abs):
         if what_happens == 'sca':
             theta = np.random.uniform(0, 2 * math.pi)
 
-
-def simulation():
-    results = []
-
-    L = 5
-    l_mean = 3
-    p_abs = 1/3
-
-    for i in range(0, 10**5):
-        results.append(throw_photon(L, l_mean, p_abs))
-
-    plt.figure()
-    plt.hist(results)
-    plt.show()
-
-
-simulation()
