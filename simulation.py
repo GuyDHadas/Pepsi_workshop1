@@ -5,7 +5,7 @@ from get_next_loc import *
 from which_event import *
 from consts import *
 from matplotlib import pyplot as plt
-import light_and_matter
+from light_and_matter import *
 
 
 def simulation():
@@ -19,7 +19,7 @@ def simulation():
         results.append(throw_photon(L, l_mean, p_abs))
 
     plt.figure()
-    plt.hist(results)
+    plt.hist()
     plt.show()
 
 
