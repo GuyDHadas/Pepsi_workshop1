@@ -19,7 +19,7 @@ def simulation():
         results.append(throw_photon(L, l_mean, p_abs))
 
     plt.figure()
-    plt.hist()
+    plt.hist(results, bins = 3)
     plt.show()
 
 
