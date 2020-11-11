@@ -4,6 +4,7 @@ import numpy as np
 from get_next_loc import *
 from which_event import *
 from consts import *
+from check_in_block import in_which_block
 
 
 def throw_photon(L, l_mean, p_abs):
@@ -13,10 +14,8 @@ def throw_photon(L, l_mean, p_abs):
     while True:
         p[0], p[1], length = get_next_loc(p[0], p[1], theta, l_mean)
         what_happens = which_event_uniform(L, l_mean, p_abs);
-        if p[0] <= 0:
-            return 0
-        if p[0] >= L:
-            return -1
+        if in_which_block(p[1]) == -2 or in_which_block(p[1]) == -1
+            return in_which_block(p[1])
         if what_happens == 'abs':
             return 1
         if what_happens == 'sca':
