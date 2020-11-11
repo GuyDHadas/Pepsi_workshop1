@@ -23,6 +23,7 @@ def throw_photon(L, l_mean, p_abs):
         if what_happens == 'sca':
             theta = np.random.uniform(0, 2 * math.pi)
 
+
 def simulation():
     results = []
 
@@ -34,5 +35,8 @@ def simulation():
         results.append(throw_photon(L, l_mean, p_abs))
 
     plt.figure()
-    plt.bar(results)
+    plt.hist(results)
     plt.show()
+
+
+simulation()
