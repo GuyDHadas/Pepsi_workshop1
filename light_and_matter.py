@@ -2,13 +2,16 @@ import random
 import math
 import numpy as np
 
-def check_in_block(L, l_mean, p_abs):
-    p = [0,0]
+# def check_in_block():
+#
+
+def throw_photon(L, l_mean, p_abs):
+    p = [0, 0]
     teta = 0
 
     while True:
         p[0], p[1], length = get_next_location(p, teta, l_mean)
-        what_happ = wich_event_uniform(length)
+        what_happ = which_event_uniform(length);
         if p[0] <= 0:
             return 0
         if p[0] >= L:
