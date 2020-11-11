@@ -6,7 +6,7 @@ from which_event import *
 from consts import *
 
 
-def check_in_block(L, l_mean, p_abs):
+def throw_photon(L, l_mean, p_abs):
     p = [0,0]
     theta = 0
 
@@ -22,8 +22,5 @@ def check_in_block(L, l_mean, p_abs):
         if what_happens == 'sca':
             theta = np.random.uniform(0, 2 * math.py)
 
-
-
-#def photon_throw(L, l_mean, p_abs):
-
+check_in_block()
 
