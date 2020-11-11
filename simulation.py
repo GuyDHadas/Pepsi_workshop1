@@ -11,12 +11,12 @@ from light_and_matter import *
 def simulation():
     results = []
 
-    L = 5
-    l_mean = 3
-    p_abs = 1/3
+    blocks = [5]
+    l_mean = [3]
+    p_abs = [1/3]
 
     for i in range(0, 10**5):
-        results.append(throw_photon(L, l_mean, p_abs))
+        results.append(throw_photon(blocks, l_mean, p_abs))
 
     plt.figure()
     plt.hist(results, bins = 3)

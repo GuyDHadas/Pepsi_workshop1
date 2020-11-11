@@ -16,3 +16,5 @@ def in_which_block(cur_y):
             last_height += blocks[i]
     return -1
 
+
+
