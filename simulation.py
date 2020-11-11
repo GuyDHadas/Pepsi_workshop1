@@ -48,12 +48,13 @@ def simulation():
         pabs_err.append(scipy.stats.sem(pabs1))
         ptrans_err.append((scipy.stats.sem(ptrans1)))
         pref_err.append(scipy.stats.sem(pref1))
-    plt.loglog([10**N for N in range(1, 6)], pref_err, label=r'$p_ref$ error')
-    plt.loglog([10**N for N in range(1, 6)], ptrans_err, label=r'$p_trans$ error')
-    plt.loglog([10**N for N in range(1, 6)], pabs_err, label=r'$p_abs$ error')
+    plt.loglog([10**N for N in range(1, 6)], pref_err, label=r'$p_{ref}$ error')
+    plt.loglog([10**N for N in range(1, 6)], ptrans_err, label=r'$p_{trans}$ error')
+    plt.loglog([10**N for N in range(1, 6)], pabs_err, label=r'$p_{abs}$ error')
     plt.xlabel("Number of photons thrown")
     plt.ylabel("Statistical error")
     plt.title("Convergence check - statistical errors")
+    plt.legend()
     plt.show()
 
 
