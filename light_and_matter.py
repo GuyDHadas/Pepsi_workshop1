@@ -50,6 +50,6 @@ def throw_photon(blocks, l_mean, p_abs):
             cur_theta = np.random.uniform(0, 2 * math.pi)
         #print(loc_list)
 
-
-print(throw_photon([5], l_mean, p_abs))
+if __name__ == "__main__":
+    print(throw_photon([5], l_mean, p_abs))
 
