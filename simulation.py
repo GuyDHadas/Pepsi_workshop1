@@ -41,5 +41,10 @@ def simulation():
     print("abs", np.average(pabs1), np.err
 
 
+def simulation2():
+    blocks = [5, 5]
+    l_mean = [1, 3]
+    p_abs = [1/2, 1/3]
+    throw_photon(blocks, l_mean, p_abs)
 
 simulation()
